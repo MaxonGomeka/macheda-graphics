@@ -48,7 +48,7 @@
 
 <div class="container2">
 <!--Area of the images-->
-   <!-- <div class="wrapper">
+   <div class="wrapper">
       <img src="fun1.jpg">
       <img src="coffee.jpg">
       <img src="coo.jpg">
@@ -59,99 +59,11 @@
       <img src="stu22.jpg">
       <img src="apple1.jpg">
      
-   </div> -->
-   <div id="slider">
-
-    <ul id="slideWrap"> 
-          <li><img src="coo.jpg" alt=""></li>
-          <li><img src="fun1.jpg" alt=""></li>
-          <li><img src="coffee1.jpg" alt=""></li>
-          <li><img src="Rest2.jpg" alt=""></li>
-          <li><img src="Logo.jpg" alt=""></li>
-         
-        </ul>
-        <a id="prev" href="#">&#8810;</a>
-        <a id="next" href="#">&#8811;</a>
-    </div>
-
-
+   </div>
+   
 
 </div>
 
-<script>
-  /*You must see that there are two button sliders, 
-  one on the left and the other on the right. For this I have used the css codes below.*/
- var slider = document.getElementById("slider");
- var sliderWidth = slider.offsetWidth;
- var slideList = document.getElementById("slideWrap");
- var count = 1;
- var items = slideList.querySelectorAll("li").length;
- var prev = document.getElementById("prev");
- var next = document.getElementById("next");
- 
- window.addEventListener('resize', function() {
-   sliderWidth = slider.offsetWidth;
- });
- 
- /*I will store in 'prevSlide' what kind of 
- changes will be made by clicking on the previous button. */
- var prevSlide = function() {
-   if(count > 1) {
-     count = count - 2;
-     slideList.style.left = "-" + count * sliderWidth + "px";
-     count++;
-   }
- 
-   else if(count = 1) {
-     count = items - 1;
-     slideList.style.left = "-" + count * sliderWidth + "px";
-     count++;
-   }
- };
- 
- 
- /*I will store in 'nextSlide' what kind 
- of changes will be made by clicking on the Next button. */
- 
- var nextSlide = function() {
-   if(count < items) {
-     slideList.style.left = "-" + count * sliderWidth + "px";
-     count++;
-   }
-   else if(count = items) {
-     slideList.style.left = "0px";
-     count = 1;
-   }
- };
- 
- /**We have determined above what will change if we click on the two buttons. Again, we will
-  *  add the buttons with that constant, that is, we will activate the buttons. */
- 
- 
- next.addEventListener("click", function() {
-   nextSlide();
- });
- 
- prev.addEventListener("click", function() {
-   prevSlide();
- });
- 
- 
- /**The following code will help to change the image automaticallyat a certain time interval. */
- 
- setInterval(function() {
-   nextSlide()
- }, 12000);
- 
- window.onload = function() {
- responsiveSlider();  
- }
- 
- 
- </script>
- 
- 
- 
 
 
 
@@ -179,22 +91,22 @@
 <li><a href="index.html">Software Development</a></li>
 <li><a href="index.html">Computer and Mobile Networks</a></li>
 <li><a href="index.html">Graphic Design</a></li>
-
+<li><a href="https://ebhautoparts.netlify.app">Partners</a></li>
 </ul>
 <!--footer_ul_amrc ends here-->
 </div>
 
 
 <div class=" col-sm-4 col-md  col-6 col">
-<h5 class="headin5_amrc col_white_amrc pt2">Our Partners</h5>
+<h5 class="headin5_amrc col_white_amrc pt2">Quick links</h5>
 <!--headin5_amrc-->
 <ul class="footer_ul_amrc">
-  <li><a href="https://ebhautoparts.netlify.app">Ebh Autoparts</a></li>
-<li><a href="index.html">Skylabs360</a></li>
-<li><a href="index.html">Cosmo11</a></li>
-<li><a href="index.html">Ngobo Prod</a></li>
-<li><a href="index.html">Option Electronics</a></li>
-<li><a href="index.html">Chitimba Village</a></li>
+<li><a href="index.html">Remove Background</a></li>
+<li><a href="index.html">Shadows & Mirror Reflection</a></li>
+<li><a href="index.html">Logo Design</a></li>
+<li><a href="index.html">Vectorization</a></li>
+<li><a href="index.html">Hair Masking/Clipping</a></li>
+<li><a href="index.html">Image Cropping</a></li>
 </ul>
 <!--footer_ul_amrc ends here-->
 </div>

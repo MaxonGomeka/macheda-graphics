@@ -12,14 +12,14 @@
 
    <link rel="stylesheet" href="style.css" />
 
-   <title>www.macheda.com</title>
+   <title>www.machedagraphics.com</title>
  </head>
  <body>
     
    <nav class="navbar">
      <!-- LOGO -->
      <div class="logo">
-     Macheda Graphics</div>
+     ZuzuTech & Graphics</div>
      <!-- NAVIGATION MENU -->
      <ul class="nav-links">
        <!-- USING CHECKBOX HACK -->
@@ -27,33 +27,25 @@
        <label for="checkbox_toggle" class="hamburger">&#9776;</label>
        <!-- NAVIGATION MENUS -->
        <div class="menu">
-         <li><a href="/">Home</a></li>
-         <li><a href="/">About Us</a></li>
+         <li><a href="myIndex.php">Home</a></li>
+         <li><a href="About.php">About Us</a></li>
          <li class="services">
            <a href="#">Services</a>
            <!-- DROPDOWN MENU -->
            <ul class="dropdown">
-             <li><a href="/">Voting System </a></li>
              <li><a href="/">Graphic Designing</a></li>
-             <li><a href="/">Networking</a></li>
-             <li><a href="/">Web and mobile development</a></li>
-             <li><a href="/">Research</a></li>
+             <li><a href="/">Cisco Networking</a></li>
+             <li><a href="/">Software development</a></li>
+             <li><a href="/">Research Analysis</a></li>
            </ul>
          </li>
          <li><a href="/">Pricing</a></li>
-         <li><a href="https://ebhautoparts.netlify.app">EBH Autoparts</a></li>
-         <li><a href="/">Contact us</a></li>
+         <li><a href="https://ebhautoparts.netlify.app">Partners</a></li>
+         <li><a href="Contact.php">Contact us</a></li>
        </div>
      </ul>
    </nav>
-<div class="container1">
-<!-- <div class="max"><img src="max.jpg">
-  </div> -->
-    <div class="para">
-      <p>Hi, Welcome to Macheda Graphics. We make it simple, but significant.💻👁️🔥</p>
-    </div>
-    
-</div>
+
 <!-- <div class="slider-container">
   <div class="slider">
     <div class="slides">
@@ -88,19 +80,117 @@
     </div>
   </div>
 </div> -->
+
+<!-- <div class="container1">
+
+    <div class="para">
+      <p>Hi, Welcome to Macheda Graphics. We make it simple, but significant.💻👁️🔥</p>
+    </div>
+    
+</div> -->
+
 <div class="container2">
 <!--Area of the images-->
-   <div class="wrapper">
-      <img src="apple1.jpg">
+   <!-- <div class="wrapper">
+      <img src="fun1.jpg">
+      <img src="coffee.jpg">
+      <img src="coo.jpg">
+      <img src="Rest.jpg">
+      <img src="logo.png">
+      <img src="Holice.jpg">
+      <img src="mabz.jpg">
       <img src="stu22.jpg">
-      <img src="Studio22.jpg">
-      <img src="maxon11.jpg">
-      <img src="ps1.jpg">
-      <img src="code11.jpg">
-   </div>
+      <img src="apple1.jpg">
+     
+   </div> -->
+
+   <div id="slider">
+
+<ul id="slideWrap"> 
+      <li><img src="coo.jpg" alt=""></li>
+      <li><img src="fun1.jpg" alt=""></li>
+      <li><img src="coffee1.jpg" alt=""></li>
+      <li><img src="Rest2.jpg" alt=""></li>
+      <li><img src="Logo.jpg" alt=""></li>
+     
+    </ul>
+    <a id="prev" href="#">&#8810;</a>
+    <a id="next" href="#">&#8811;</a>
+</div>
+   
 
 </div>
+<script>
+ /*You must see that there are two button sliders, 
+ one on the left and the other on the right. For this I have used the css codes below.*/
+var slider = document.getElementById("slider");
+var sliderWidth = slider.offsetWidth;
+var slideList = document.getElementById("slideWrap");
+var count = 1;
+var items = slideList.querySelectorAll("li").length;
+var prev = document.getElementById("prev");
+var next = document.getElementById("next");
 
+window.addEventListener('resize', function() {
+  sliderWidth = slider.offsetWidth;
+});
+
+/*I will store in 'prevSlide' what kind of 
+changes will be made by clicking on the previous button. */
+var prevSlide = function() {
+  if(count > 1) {
+    count = count - 2;
+    slideList.style.left = "-" + count * sliderWidth + "px";
+    count++;
+  }
+
+  else if(count = 1) {
+    count = items - 1;
+    slideList.style.left = "-" + count * sliderWidth + "px";
+    count++;
+  }
+};
+
+
+/*I will store in 'nextSlide' what kind 
+of changes will be made by clicking on the Next button. */
+
+var nextSlide = function() {
+  if(count < items) {
+    slideList.style.left = "-" + count * sliderWidth + "px";
+    count++;
+  }
+  else if(count = items) {
+    slideList.style.left = "0px";
+    count = 1;
+  }
+};
+
+/**We have determined above what will change if we click on the two buttons. Again, we will
+ *  add the buttons with that constant, that is, we will activate the buttons. */
+
+
+next.addEventListener("click", function() {
+  nextSlide();
+});
+
+prev.addEventListener("click", function() {
+  prevSlide();
+});
+
+
+/**The following code will help to change the image automaticallyat a certain time interval. */
+
+setInterval(function() {
+  nextSlide()
+}, 12000);
+
+window.onload = function() {
+responsiveSlider();  
+}
+
+
+</script>
 
 
 
@@ -137,13 +227,10 @@
 <h5 class="headin5_amrc col_white_amrc pt2">Services</h5>
 <!--headin5_amrc-->
 <ul class="footer_ul_amrc">
-<li><a href="http://webenlance.com">Online Voting System</a></li>
+<li><a href="http://webenlance.com">Software Development</a></li>
 <li><a href="http://webenlance.com">Computer and Mobile Networks</a></li>
 <li><a href="http://webenlance.com">Graphic Design</a></li>
-<li><a href="http://webenlance.com">Web Development</a></li>
-<li><a href="http://webenlance.com">Desktop and Mobile apps Development</a></li>
-<li><a href="http://webenlance.com">Domain and Hosting</a></li>
-<li><a href="https://ebhautoparts.netlify.app">EBH Autoparts</a></li>
+<li><a href="https://ebhautoparts.netlify.app">Partners</a></li>
 </ul>
 <!--footer_ul_amrc ends here-->
 </div>
@@ -181,16 +268,10 @@
 
 
 <div class="container">
-<!-- <ul class="foote_bottom_ul_amrc">
-<li><a href="http://webenlance.com">Home</a></li>
-<li><a href="http://webenlance.com">About</a></li>
-<li><a href="http://webenlance.com">Services</a></li>
-<li><a href="http://webenlance.com">Pricing</a></li>
-<li><a href="http://webenlance.com">Contact</a></li>
-</ul> -->
+
 <!--foote_bottom_ul_amrc ends here-->
 <p class="text-center">Copyright @2022 | Designed With by <a href="https://web.facebook.com/Macheda-Graphics-110845641646635/">Macheda Graphics</a></p>
-<p class="text-center">Macheda Graphics and Designs | All rights reserved| Terms Of service | Privacy</p> 
+<p class="text-center">All rights reserved| Terms Of service | Privacy</p> 
 
 <ul class="social_footer_ul">
 <li><a href="https://web.facebook.com/Macheda-Graphics-110845641646635/"><i class="fab fa-facebook-f"></i></a></li>
